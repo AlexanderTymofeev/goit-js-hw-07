@@ -10,7 +10,7 @@ function createGalary(galleryItems) {
     return galleryItems
         .map(({ preview, original, description }) => {
         return `
-      <div class="gallery__item">
+      <li class="gallery__item">
         <a class="gallery__link" href="${original}">
           <img
             class="gallery__image"
@@ -19,7 +19,7 @@ function createGalary(galleryItems) {
             alt="${description}"
           />
         </a>
-      </div>`;
+      </li>`;
 }).join('');
 }
 
@@ -29,3 +29,7 @@ const lightbox = new SimpleLightbox(".gallery a", {
 });
 
 console.log(galleryItems);
+
+
+
+
